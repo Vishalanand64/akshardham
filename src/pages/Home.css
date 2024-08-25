@@ -1,0 +1,287 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.main{
+    width: 100%;
+    height: 100vh;
+    background-color: #111;
+    
+}
+.cursor{
+    width: 15px;
+    height: 15px;
+    background-color:#ac6a47;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 99999;
+}
+.bell{
+    position: absolute;
+    z-index: 99;
+    right: 10%;
+    top: -35%;
+}
+
+.navBar{
+    width: 100%;
+    height: 10vh;
+    position: absolute;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    z-index: 11;
+}
+.left-nav , .right-nav{
+    width: 20%;
+    height: auto;
+    
+}
+.left-nav{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.left-nav h2{
+    font-family: General Sans Medium;
+    letter-spacing: 2px;
+    
+}
+.right-nav{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 30px;
+    cursor: pointer;
+}
+.menu{
+    position: absolute;
+    width: 40vw;
+    height: 100%;
+  
+    top:0;
+    right: 0;
+    /* transform: translateX(40vw); */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 40px ;
+    background-color: rgba(255, 255, 255, 0.136);
+    backdrop-filter: blur(10px);
+    z-index:99;
+    
+    
+}
+.menu h1 {
+    overflow: hidden;
+    color: #111;
+    font-size: 4vw;
+    cursor: pointer;
+    width: fit-content;
+    text-transform: uppercase;
+    font-family: 800;
+}
+.menu h1:hover{
+    color: #ac6a47;
+}
+.cross{
+    position: absolute;
+    font-size: 40px;
+    top: 5%;
+    right: 5%;
+    width: auto;
+    height: auto;
+    cursor: pointer;
+    color: #111;
+}
+.hero{
+    width: 100%;
+    height: auto;
+    
+    
+}
+.topHero{
+    width: 100%;
+    height: 100Vh;
+    background-color: #111;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+}
+.topHero img{
+    width: 100%;
+    position: relative;
+   
+}
+.sun{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(252, 176, 26);
+    position: absolute;
+    border-radius: 50%;
+    top: 15%;
+    left: 40%;
+    opacity: 0.8;
+    box-shadow: 0 0 0px rgb(252, 176, 26) ;
+    animation-name: glow;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes glow {
+    0%{
+     top:30%;
+     box-shadow: 0 0 0px rgb(252, 176, 26) , 0 0 0px rgb(255, 251, 16) ;
+    }
+    50%{
+     top:15%;
+     box-shadow: 0 0 100px rgb(252, 176, 26) , 0 0 100px rgb(255, 251, 16) ;
+    }
+    100%{
+     top:30%;
+     box-shadow: 0 0 0px rgb(252, 176, 26) , 0 0 0px rgb(255, 251, 16) ;
+    }
+ }
+
+.bottomHero{
+    width: 100%;
+    height: auto;
+    overflow-y: hidden;
+    background-color: #111;
+    
+}
+.floatingText{
+    
+    background-color: #ac6a47;
+    padding: 20px 0;
+    display: flex;
+    overflow: hidden;
+    gap: 20px;
+   
+}
+.marque{
+    display: flex;
+    font-size: 40px;
+    height: auto;
+    align-items: center;
+    gap: 20px;
+    flex-shrink: 0;
+    transform: translateX(-100%);
+    
+    
+}
+.marque h1{
+    overflow-y: hidden;
+}
+.locationContainer{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+}
+.locationContainer h1{
+    overflow-y: hidden;
+    font-size: 80px;
+    text-transform: uppercase;
+    letter-spacing: 40px;
+    color: #282828;
+}
+.map{
+    border-radius: 10px;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    position: relative;
+    width: 600px;
+    
+}
+.location-sub{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    font-family: General Sans;
+}
+.location-sub h2{
+    width: 400px;
+}
+.history{
+    width: 100%;
+    height: 150vh;
+    background-color: #111;
+    font-family: General Sans Medium;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.history h1{
+    overflow: hidden;
+    font-weight: 700;
+    color: rgb(253, 148, 2);
+}
+.history p {
+    max-width: 90%;
+    color: rgb(255, 255, 255);
+}
+.history div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: auto;
+}
+.imgCanvas{
+    width: 1000px;
+    min-height: 500px;
+    margin-top: 80px;
+    animation-name: display;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    transition: all ;
+    
+}
+
+@keyframes display {
+    0%{
+        background: url(https://akshardham.com/newdelhi/wp-content/uploads/2015/05/akshardham_spiritual_Significance_banner.jpg);
+        background-position: center;
+        background-size: cover;
+        
+    }
+    20%{
+        background: url(https://akshardham.com/newdelhi/wp-content/supersized-slides/monument_side_profile-034.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+    40%{
+        background: url(https://akshardham.com/newdelhi/wp-content/supersized-slides/monument_night-004.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+    60%{
+        background: url(https://akshardham.com/newdelhi/wp-content/supersized-slides/monument_with_garden-015.jpg);
+        background-position: center;
+        background-size: cover;
+
+    }
+    80%{
+        background: url(https://akshardham.com/newdelhi/wp-content/supersized-slides/monument_side_profile-034.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+    100%{
+        background: url(https://akshardham.com/newdelhi/wp-content/supersized-slides/monument_night-004.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+   
+}
+
